@@ -1,0 +1,11 @@
+{
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^8.1",
+        "tightenco/collect": "^5.8"
+    }
+}

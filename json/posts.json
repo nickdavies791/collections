@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "user": {
+      "id": 3,
+      "name": "Jane Doe"
+    },
+    "title": "My first post",
+    "body": "My very interesting post about Laravel.",
+    "created_at": "2019-04-10 11:47:01",
+    "deleted_at": null,
+    "comments": {
+      "id": 1,
+      "user": {
+        "id": 1,
+        "name": "Nick Davies"
+      },
+      "body": "This is a great post about Laravel.",
+      "created_at": "2019-04-12 12:04:12",
+      "deleted_at": null
+    }
+  },
+  {
+    "id": 2,
+    "user": {
+      "id": 3,
+      "name": "Jane Doe"
+    },
+    "title": "My second post",
+    "body": "My very interesting post about Collections.",
+    "created_at": "2018-06-22 08:01:12",
+    "deleted_at": "2018-06-24 09:45:20",
+    "comments": {
+      "id": 2,
+      "user": {
+        "id": 6,
+        "name": "Jeff Doe"
+      },
+      "body": "This is a great post about Collections.",
+      "created_at": "2018-06-23 14:12:12",
+      "deleted_at": "2018-06-24 09:45:20"
+    }
+  },
+  {
+    "id": 3,
+    "user": {
+      "id": 1,
+      "name": "Nick Davies"
+    },
+    "title": "My third post",
+    "body": "My very interesting post about Vue.",
+    "created_at": "2014-04-22 08:01:12",
+    "deleted_at": null,
+    "comments": {
+      "id": 3,
+      "user": {
+        "id": 3,
+        "name": "Jane Doe"
+      },
+      "body": "This is a great post about Vue.",
+      "created_at": "2014-04-26 11:11:02",
+      "deleted_at": null
+    }
+  },
+  {
+    "id": 4,
+    "user": {
+      "id": 1,
+      "name": "Nick Davies"
+    },
+    "title": "My fourth post",
+    "body": "My very interesting post about Laravel Forge.",
+    "created_at": "2016-11-22 06:45:41",
+    "deleted_at": null,
+    "comments": {
+      "id": 4,
+      "user": {
+        "id": 3,
+        "name": "Jane Doe"
+      },
+      "body": "This is a great post about Laravel Forge.",
+      "created_at": "2016-11-22 06:45:41",
+      "deleted_at": "2016-11-22 06:47:12"
+    }
+  }
+]

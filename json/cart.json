@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "product": "Banana",
+    "aisle": "Fruit",
+    "price": 39,
+    "quantity": 5
+  },
+  {
+    "id": 2,
+    "product": "Milk",
+    "aisle": "Dairy",
+    "price": 109,
+    "quantity": 2
+  },
+  {
+    "id": 3,
+    "product": "Apple",
+    "aisle": "Fruit",
+    "price": 65,
+    "quantity": 6
+  },
+  {
+    "id": 4,
+    "product": "Bread",
+    "aisle": "Bakery",
+    "price": 140,
+    "quantity": 1
+  },
+  {
+    "id": 5,
+    "product": "Lettuce",
+    "aisle": "Vegetable",
+    "price": 80,
+    "quantity": 2
+  },
+  {
+    "id": 6,
+    "product": "Onion",
+    "aisle": "Vegetable",
+    "price": 45,
+    "quantity": 6
+  }
+]

@@ -60,4 +60,16 @@ class CartTest extends TestCase
 
         $this->assertEquals(39, $cheapestItem);
     }
+
+    /**
+     * @test
+     */
+    public function get_the_average_number_of_items_in_the_cart()
+    {
+        $items = collect($this->load('cart.json'));
+
+        $avg = $items->pluck('quantity')->avg();
+
+        $this->assertEquals(3.6666666666667, $avg);
+    }
 }

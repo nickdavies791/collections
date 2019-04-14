@@ -72,4 +72,30 @@ class CartTest extends TestCase
 
         $this->assertEquals(3.6666666666667, $avg);
     }
+
+    /**
+     * @test
+     */
+    public function compare_cart_to_another_cart()
+    {
+        $cartA = collect([
+            'id' => 1,
+            'product' => 'Tomato',
+            'aisle' => 'Fruit',
+            'price' => 40,
+            'quantity' => 8
+        ]);
+        $cartB = collect([
+            'id' => 1,
+            'product' => 'Oranges',
+            'aisle' => 'Fruit',
+            'price' => 40,
+            'quantity' => 4
+        ]);
+
+        $this->assertEquals([
+            'product' => 'Tomato',
+            'quantity' => 8
+        ], $cartA->diff($cartB)->all());
+    }
 }

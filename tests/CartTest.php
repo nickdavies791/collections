@@ -98,4 +98,18 @@ class CartTest extends TestCase
             'quantity' => 8
         ], $cartA->diff($cartB)->all());
     }
+
+    /**
+     * @test
+     */
+    public function split_cart_into_items_less_than_100_pence_and_items_greater_than_100_pence_in_price_order()
+    {
+        $items = collect($this->load('cart.json'));
+
+        list($cheap, $expensive) = $items->sortBy('price')
+            ->partition(function ($item) { return $item->price < 100; })->all();
+
+        $this->assertCount(4, $cheap);
+        $this->assertCount(2, $expensive);
+    }
 }

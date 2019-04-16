@@ -10,6 +10,20 @@
       "start": "2012-12-09",
       "end": "2016-12-09"
     },
+    "sales": [
+      {
+        "customer": "The Blue Rabbit Corporation",
+        "product": "Blue Lamp",
+        "quantity": 500,
+        "unit_price": 4995
+      },
+      {
+        "customer": "Yellow Taxi Firm",
+        "product": "Yellow Paint",
+        "quantity": 1000,
+        "unit_price": 3500
+      }
+    ],
     "salary": 18900
   },
   {
@@ -23,6 +37,20 @@
       "start": "2010-01-12",
       "end": null
     },
+    "sales": [
+      {
+        "customer": "Computer Wizz Ltd",
+        "product": "Keyboard",
+        "quantity": 425,
+        "unit_price": 1800
+      },
+      {
+        "customer": "Mega Toys Corp",
+        "product": "Train Set",
+        "quantity": 2000,
+        "unit_price": 2499
+      }
+    ],
     "salary": 26700
   },
   {

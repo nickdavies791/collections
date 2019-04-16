@@ -228,4 +228,20 @@ class UsersTest extends TestCase
             'Finance' => 1,
         ], $count);
     }
+
+    /**
+     * @test
+     */
+    public function get_the_most_valuable_customer()
+    {
+        $users = collect($this->load('users.json'));
+
+        $customer = $users->filter(function ($user) {
+            return $user->department == 'Sales';
+        })->pluck('sales')->flatten()->groupBy('customer')->map(function ($sales) {
+            return $sales->sum('quantity') * $sales->sum('unit_price');
+        })->sort()->reverse()->keys()->first();
+
+        $this->assertEquals('Mega Toys Corp', $customer);
+    }
 }

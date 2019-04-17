@@ -18,6 +18,18 @@ class DNATest extends TestCase
     }
 
     /**
+     * @test
+     */
+    public function get_reverse_sequence_of_strand_of_dna()
+    {
+        $strand = 'CCUGCAACUUAGGCAGG';
+
+        $reverse = $this->reverse_sequence($strand);
+
+        $this->assertEquals('GGACGGAUUCAACGUCC', $reverse);
+    }
+
+    /**
      * Returns the hamming distance between two DNA strands.
      *
      * @param $strandA
@@ -31,5 +43,18 @@ class DNATest extends TestCase
                 list($a, $b) = $pair;
                 return $a === $b ? 0 : 1;
             })->sum();
+    }
+
+    /**
+     * Returns the reverse sequence for a given DNA strand.
+     *
+     * @param $strand
+     * @return mixed
+     */
+    private function reverse_sequence($strand)
+    {
+        return collect(str_split($strand))->reverse()->reduce(function ($value, $letter) {
+            return $value . $letter;
+        });
     }
 }

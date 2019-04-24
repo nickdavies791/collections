@@ -4,9 +4,16 @@ use Tests\TestCase;
 
 class PalindromeTest extends TestCase
 {
-    private function isPalindrome($word): string
+    /**
+     * Returns whether given word is a palindrome.
+     */
+    private function isPalindrome($word): bool
     {
-        return collect(str_split($word));
+        $reversed = collect(str_split($word))->reverse()->reduce(function ($value, $letter) {
+            return $value . $letter;
+        });
+
+        return $word === $reversed ? true : false;
     }
 
     /**
@@ -14,6 +21,10 @@ class PalindromeTest extends TestCase
      */
     public function a_given_word_is_a_palindrome()
     {
-        dd($this->isPalindrome('hannah'));
+        $stringA = $this->isPalindrome('hannah');
+        $stringB = $this->isPalindrome('octopus');
+
+        $this->assertEquals(true, $stringA);
+        $this->assertEquals(false, $stringB);
     }
 }

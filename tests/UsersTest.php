@@ -244,21 +244,4 @@ class UsersTest extends TestCase
 
         $this->assertEquals('Mega Toys Corp', $customer);
     }
-
-    /**
-     * @test
-     */
-    public function a_user_can_be_mapped_into_a_User_class()
-    {
-        $users = collect($this->load('users.json'));
-
-        $users = $users->mapInto(User::class);
-
-        dd($users->all());
-    }
-}
-
-
-class User {
-    //
 }
